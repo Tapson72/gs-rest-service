@@ -1,0 +1,8 @@
+GET
+curl -X GET http://localhost:8080/greeting
+
+POST
+curl -X POST http://localhost:8080/greeting -H "Content-Type: application/json" -d '{Test}'
+
+DELETE
+curl --request "DELETE" http://localhost:8080/greetingDelete/1
