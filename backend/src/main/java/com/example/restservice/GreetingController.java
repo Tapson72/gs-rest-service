@@ -21,9 +21,14 @@ public class GreetingController {
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
 
-	@PostMapping("greetingPost")
+	@PostMapping("greeting")
 	public void greetingPost(@RequestBody String body){
 		logger.debug("post", body);
+	}
+
+	@DeleteMapping("greeting/{id}")
+	public void greetingDelete(@PathVariable("id") Long todoId){
+		logger.debug("greetingDelete", todoId);
 	}
 
 }
